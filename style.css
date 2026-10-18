@@ -292,4 +292,57 @@ footer a{
     .hero h1{
         font-size:2.7rem;
     }
+
+    body{
+margin:0;
+font-family:Montserrat,sans-serif;
+}
+
+.header{
+background:#153e75;
+color:white;
+padding:20px 0;
+}
+
+.container{
+width:90%;
+max-width:1400px;
+margin:auto;
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+.logo-section{
+display:flex;
+gap:20px;
+align-items:center;
+}
+
+.logo{
+width:70px;
+height:70px;
+border-radius:50%;
+background:white;
+color:#153e75;
+display:flex;
+align-items:center;
+justify-content:center;
+font-weight:bold;
+}
+
+nav{
+display:flex;
+gap:30px;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+font-weight:600;
+}
+
+nav a:hover{
+color:#ffd166;
+}
 }
