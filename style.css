@@ -1,0 +1,295 @@
+:root{
+    --navy:#0f2d52;
+    --blue:#1e5ba9;
+    --gold:#d5ab49;
+    --light:#f7f8fb;
+    --grey:#e9edf2;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Segoe UI,sans-serif;
+    color:#333;
+    line-height:1.7;
+}
+
+.container{
+    width:90%;
+    max-width:1400px;
+    margin:auto;
+}
+
+.topbar{
+    background:var(--gold);
+    color:white;
+    padding:8px;
+    text-align:center;
+}
+
+.navbar{
+    height:95px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+header{
+    background:white;
+    box-shadow:0 2px 20px rgba(0,0,0,.08);
+    position:sticky;
+    top:0;
+    z-index:999;
+}
+
+.branding{
+    display:flex;
+    align-items:center;
+    gap:15px;
+}
+
+.logo,
+.footer-logo{
+    width:70px;
+    height:70px;
+    background:var(--navy);
+    color:white;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    border-radius:50%;
+    font-weight:700;
+}
+
+nav{
+    display:flex;
+    gap:35px;
+}
+
+nav a{
+    text-decoration:none;
+    color:var(--navy);
+    font-weight:600;
+}
+
+.hero{
+    height:85vh;
+    background:url("https://images.unsplash.com/photo-1509062522246-3755977927d7?q=80&w=1800")
+    center center/cover;
+}
+
+.hero-overlay{
+    background:rgba(10,20,50,.65);
+    height:100%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.hero-content{
+    text-align:center;
+    color:white;
+    max-width:900px;
+}
+
+.hero-logo{
+    width:130px;
+    height:130px;
+    border:3px solid white;
+    border-radius:50%;
+    margin:auto auto 30px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.hero h1{
+    font-size:4.8rem;
+    margin-bottom:20px;
+}
+
+.hero p{
+    font-size:1.4rem;
+}
+
+.btn{
+    display:inline-block;
+    margin-top:30px;
+    background:var(--gold);
+    color:white;
+    text-decoration:none;
+    padding:15px 35px;
+    border-radius:6px;
+}
+
+.quicklinks{
+    padding:30px 0;
+}
+
+.grid4{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
+}
+
+.quick-card{
+    background:var(--navy);
+    color:white;
+    text-align:center;
+    padding:35px;
+    border-radius:10px;
+    font-weight:700;
+}
+
+.welcome{
+    padding:90px 0;
+}
+
+.welcome-grid{
+    display:grid;
+    grid-template-columns:400px 1fr;
+    gap:50px;
+}
+
+.head-image{
+    height:500px;
+    background:#dfe6ef;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-weight:bold;
+}
+
+.news{
+    padding:90px 0;
+    background:var(--light);
+}
+
+.news-grid{
+    margin-top:30px;
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
+}
+
+.news-card{
+    background:white;
+    border-radius:15px;
+    overflow:hidden;
+}
+
+.news-img{
+    height:220px;
+    background:#d6dde7;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.news-body{
+    padding:25px;
+}
+
+.events{
+    padding:90px 0;
+}
+
+.event{
+    display:flex;
+    gap:25px;
+    background:white;
+    padding:20px;
+    margin-top:20px;
+    box-shadow:0 5px 20px rgba(0,0,0,.08);
+}
+
+.datebox{
+    width:90px;
+    background:var(--navy);
+    color:white;
+    text-align:center;
+    padding:10px;
+}
+
+.datebox span{
+    font-size:32px;
+    display:block;
+}
+
+.cta{
+    background:var(--navy);
+    color:white;
+    text-align:center;
+    padding:100px 0;
+}
+
+footer{
+    background:#071628;
+    color:white;
+    padding:70px 0 20px;
+}
+
+.footer-grid{
+    display:grid;
+    grid-template-columns:2fr 1fr 1fr;
+    gap:50px;
+}
+
+footer ul{
+    list-style:none;
+}
+
+footer a{
+    color:white;
+    text-decoration:none;
+}
+
+.copyright{
+    text-align:center;
+    margin-top:50px;
+    opacity:.7;
+}
+
+.mobile-btn{
+    display:none;
+}
+
+@media(max-width:900px){
+
+    .mobile-btn{
+        display:block;
+        border:none;
+        background:none;
+        font-size:26px;
+    }
+
+    nav{
+        display:none;
+    }
+
+    nav.show{
+        display:flex;
+        flex-direction:column;
+        position:absolute;
+        top:95px;
+        left:0;
+        width:100%;
+        background:white;
+        padding:20px;
+    }
+
+    .welcome-grid,
+    .news-grid,
+    .footer-grid,
+    .grid4{
+        grid-template-columns:1fr;
+    }
+
+    .hero h1{
+        font-size:2.7rem;
+    }
+}
